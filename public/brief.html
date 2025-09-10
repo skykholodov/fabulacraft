@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Отправить бриф — FABULA CRAFT</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container flex">
+      <a href="/" class="logo"><img src="images/logo.webp" alt="FABULA CRAFT" class="logo-img"></a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="about.html">О нас</a></li>
+          <li><a href="catalog.html">Каталог</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="section">
+      <div class="container">
+        <h1>Бриф</h1>
+        <p>Чем подробнее — тем точнее расчёт.</p>
+        <p>Что важно указать:</p>
+        <ul>
+          <li>Назначение изделия и тираж</li>
+          <li>Материалы и отделки (если есть пожелания)</li>
+          <li>Срок и бюджетный диапазон</li>
+          <li>Нужна ли персонализация/нумерация</li>
+          <li>Контакты для связи и макеты/референсы</li>
+        </ul>
+        <form id="briefForm" class="contact-form">
+          <div class="form-row">
+            <label for="bfName">Имя</label>
+            <input type="text" id="bfName" required>
+          </div>
+          <div class="form-row">
+            <label for="bfEmail">Email</label>
+            <input type="email" id="bfEmail">
+          </div>
+          <div class="form-row">
+            <label for="bfPhone">Телефон</label>
+            <input type="tel" id="bfPhone">
+          </div>
+          <div class="form-row">
+            <label for="bfPurpose">Назначение и тираж</label>
+            <textarea id="bfPurpose" rows="3"></textarea>
+          </div>
+          <div class="form-row">
+            <label for="bfDetails">Материалы, отделки, персонализация</label>
+            <textarea id="bfDetails" rows="3"></textarea>
+          </div>
+          <div class="form-row">
+            <label for="bfDeadline">Срок и бюджет</label>
+            <input type="text" id="bfDeadline">
+          </div>
+          <div class="form-row">
+            <label for="bfFiles">Макеты/референсы</label>
+            <input type="file" id="bfFiles" multiple>
+          </div>
+          <div class="form-row checkbox-row">
+            <input type="checkbox" id="bfConsent" required>
+            <label for="bfConsent">Я соглашаюсь с политикой конфиденциальности</label>
+          </div>
+          <button type="submit" class="btn btn-primary">Отправить бриф</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-nav">
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="about.html">О нас</a></li>
+          <li><a href="catalog.html">Каталог</a></li>
+        </ul>
+      </div>
+      <div class="footer-policy">
+        <p>© FABULA CRAFT, 1994–2025</p>
+        <p>ТОО «FABULA» — БИН 941140001376</p>
+        <p>Адрес: Алматы, ул. Полежаева, 65</p>
+        <p>Тел.: +7 (727) 278-04-99, +7 (727) 233-68-73</p>
+        <p>E-mail: fabula.kz@mail.ru</p>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
