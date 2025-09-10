@@ -9,6 +9,26 @@ const url = require('url');
 const publicDir = path.join(__dirname, 'public');
 const productsFile = path.join(publicDir, 'data', 'products.json');
 const imagesDir = path.join(publicDir, 'images');
+const ADMIN_USER = process.env.ADMIN_USER || 'admin';
+const ADMIN_PASS = process.env.ADMIN_PASS || 'fabula';
+
+function getCookies(req) {
+  const cookie = req.headers.cookie || '';
+  return cookie.split(';').reduce((acc, pair) => {
+    const idx = pair.indexOf('=');
+    if (idx > -1) {
+      const key = pair.slice(0, idx).trim();
+      const val = pair.slice(idx + 1).trim();
+      acc[key] = val;
+    }
+    return acc;
+  }, {});
+}
+
+function isAuthenticated(req) {
+  const cookies = getCookies(req);
+  return cookies.auth === '1';
+}
 
 /**
  * Определить MIME‑тип в зависимости от расширения файла.
@@ -129,6 +149,33 @@ const server = http.createServer((req, res) => {
   const parsedUrl = url.parse(req.url, true);
   const pathname = decodeURIComponent(parsedUrl.pathname);
 
+  if (pathname === '/login' && req.method === 'POST') {
+    let body = '';
+    req.on('data', chunk => (body += chunk));
+    req.on('end', () => {
+      try {
+        const { username, password } = JSON.parse(body);
+        if (username === ADMIN_USER && password === ADMIN_PASS) {
+          res.writeHead(200, {
+            'Content-Type': 'application/json; charset=utf-8',
+            'Set-Cookie': 'auth=1; HttpOnly'
+          });
+          res.end(JSON.stringify({ ok: true }));
+        } else {
+          sendJson(res, 401, { error: 'Unauthorized' });
+        }
+      } catch (err) {
+        sendJson(res, 400, { error: 'Invalid JSON' });
+      }
+    });
+    return;
+  }
+
+  if (['/admin.html', '/admin.js'].includes(pathname) && !isAuthenticated(req)) {
+    res.writeHead(302, { Location: '/login.html' });
+    return res.end();
+  }
+
   // API для товаров
   if (pathname.startsWith('/api/products')) {
     // Разрешим CORS для удобства разработки
@@ -139,6 +186,9 @@ const server = http.createServer((req, res) => {
     if (req.method === 'OPTIONS') {
       res.writeHead(204);
       return res.end();
+    }
+    if (req.method !== 'GET' && !isAuthenticated(req)) {
+      return sendJson(res, 401, { error: 'Unauthorized' });
     }
     const products = readProducts();
     // /api/products или /api/products/:id

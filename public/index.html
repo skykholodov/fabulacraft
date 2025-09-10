@@ -2,464 +2,216 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fabula — награды и сувениры на заказ</title>
-  <meta name="description" content="Fabula — более 30 лет опыта в изготовлении медалей, значков и корпоративных подарков. Индивидуальный подход, полный цикл работ и контроль качества.">
-  <!-- Open Graph / Twitter for social previews -->
-  <meta property="og:title" content="Fabula — награды и сувениры на заказ">
-  <meta property="og:description" content="Конверсионный лендинг для заказа медалей, значков и сувениров с индивидуальным дизайном. Полный цикл: от идеи до упаковки.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="images/hero.webp">
-  <meta property="og:url" content="#">
-  <!-- Stylesheets -->
+  <title>Медали, значки, награды на заказ в Алматы — FABULA CRAFT (с 1994 г.)</title>
+  <meta name="description" content="FABULA CRAFT — мастерская медалей и наград в Алматы. Полный цикл: дизайн, литьё, гальваника, эмаль, гравировка. Медали, значки, жетоны, памятные монеты и орденские планки. Индивидуальный дизайн и любые тиражи.">
   <link rel="stylesheet" href="style.css">
-  <!-- Accessibility: Prefers-reduced-motion -->
-  <style>
-    @media (prefers-reduced-motion: reduce) {
-      * {
-        animation-duration: 0.001ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.001ms !important;
-        scroll-behavior: auto !important;
-      }
-    }
-  </style>
 </head>
 <body>
-  <!-- Schema.org for LocalBusiness -->
-  <div itemscope itemtype="http://schema.org/LocalBusiness" style="display:none;">
-    <span itemprop="name">Fabula</span>
-    <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-      <meta itemprop="streetAddress" content="ул. Торетай, 65">
-      <meta itemprop="addressLocality" content="Алматы">
-      <meta itemprop="addressRegion" content="Алматинская область">
-      <meta itemprop="addressCountry" content="Казахстан">
-    </span>
-    <meta itemprop="telephone" content="+77475583961">
-    <meta itemprop="openingHours" content="Mo-Fr 09:00-18:00">
-  </div>
-
-  <!-- Header / Navigation -->
   <header class="site-header">
     <div class="container flex">
-      <a href="#" class="logo" aria-label="Fabula">
-        <img src="images/logo.webp" alt="Логотип Fabula" class="logo-img" width="100" height="auto" loading="lazy">
-      </a>
-      <nav class="main-nav" aria-label="Основная навигация">
+      <a href="/" class="logo"><img src="images/logo.webp" alt="FABULA CRAFT" class="logo-img"></a>
+      <nav class="main-nav">
         <ul>
-          <li><a href="#cases">Для кого</a></li>
-          <li><a href="#advantages">Преимущества</a></li>
-          <li><a href="#catalog">Каталог</a></li>
+          <li><a href="#services">Услуги</a></li>
+          <li><a href="#materials">Материалы</a></li>
+          <li><a href="#clients">Клиенты</a></li>
+          <li><a href="#why">Почему мы</a></li>
+          <li><a href="#steps">Как заказать</a></li>
           <li><a href="#portfolio">Портфолио</a></li>
-          <li><a href="#process">Как работаем</a></li>
           <li><a href="#faq">FAQ</a></li>
-          <li><a href="#trust">Доверие</a></li>
           <li><a href="#contacts">Контакты</a></li>
         </ul>
       </nav>
       <div class="header-cta">
-        <a href="#catalog" class="btn btn-secondary">Каталог</a>
-        <button class="btn btn-primary" id="openBrief" aria-label="Получить расчёт">Получить расчёт</button>
+        <a href="brief.html" class="btn btn-primary">Заказать расчёт</a>
       </div>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero" role="banner">
-    <img src="images/hero.webp" alt="Абстрактный фон в фирменных цветах Fabula" class="hero-bg" loading="lazy">
-    <div class="hero-overlay"></div>
-    <div class="container hero-content">
-      <h1>Награды и сувениры на заказ</h1>
-      <p class="subtitle">Индивидуальное производство, 30 лет опыта, полный цикл работ</p>
-      <div class="hero-actions">
-        <a href="#catalog" class="btn btn-primary">Перейти в каталог</a>
-        <button class="btn btn-secondary" id="openBriefHero" aria-label="Получить расчёт">Получить расчёт</button>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>FABULA CRAFT — мастерская медалей и наград в Алматы</h1>
+        <p class="subtitle">С 1994 года создаём медали, значки, жетоны, орденские планки и памятные монеты — от идеи до готового изделия.</p>
+        <div class="hero-actions">
+          <a href="brief.html" class="btn btn-primary">Заказать расчёт</a>
+          <a href="#portfolio" class="btn btn-secondary">Посмотреть портфолио</a>
+          <a href="#contacts" class="btn btn-secondary">Написать нам</a>
+        </div>
+        <p class="under-hero">Полный цикл: дизайн → 3D-модель → литьё → гальваника → эмаль → гравировка → сборка и упаковка.</p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Cases / Who For -->
-  <section id="cases" class="section cases bg-alt">
-    <div class="container">
-      <h2>Кому мы помогаем</h2>
-      <div class="cases-grid">
-        <div class="case-card">
-          <h3>Госсектор</h3>
-          <p>Награды, ордена и медали для государственных учреждений и ведомств.</p>
-        </div>
-        <div class="case-card">
-          <h3>Корпоративные награды</h3>
-          <p>Премии, знаки отличия и подарочные наборы для сотрудников и партнёров.</p>
-        </div>
-        <div class="case-card">
-          <h3>Спорт и учёба</h3>
-          <p>Медали, кубки и дипломы для спортивных и учебных соревнований.</p>
-        </div>
-        <div class="case-card">
-          <h3>VIP‑подарки</h3>
-          <p>Эксклюзивные сувениры и памятные монеты для особых случаев.</p>
-        </div>
+    <section id="services" class="section">
+      <div class="container">
+        <h2>Чем мы занимаемся</h2>
+        <ul>
+          <li>Медали спортивные и памятные (в т.ч. под эмаль и с комбинированной отделкой)</li>
+          <li>Значки и знаки отличия (эмаль/горячая эмаль, штифт/винт, магнит)</li>
+          <li>Жетоны (сувенирные, идентификационные)</li>
+          <li>Орденские планки и миниатюры</li>
+          <li>Памятные монеты и сувенирные плакеты</li>
+          <li>Брелоки, бейджи, сувениры с гравировкой и нанесением логотипа</li>
+        </ul>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Advantages / Technologies -->
-  <section id="advantages" class="section advantages">
-    <div class="container">
-      <h2>Наши преимущества</h2>
-      <div class="adv-grid">
-        <div class="adv-card">
-          <h3>Полный цикл</h3>
-          <p>От идеи и дизайна до изготовления и упаковки — все процессы внутри нашей компании.</p>
-        </div>
-        <div class="adv-card">
-          <h3>Контроль качества</h3>
-          <p>Тщательный контроль на каждом этапе производства гарантирует высокое качество.</p>
-        </div>
-        <div class="adv-card">
-          <h3>Современные технологии</h3>
-          <p>Используем литье, штамповку, 3D‑печать и гальванику для достижения идеального результата.</p>
-        </div>
-        <div class="adv-card">
-          <h3>Материалы премиум‑класса</h3>
-          <p>Бронза, латунь, эмали и высококачественные покрытия для долговечности изделий.</p>
-        </div>
+    <section id="materials" class="section bg-alt">
+      <div class="container">
+        <h2>Материалы и технологии</h2>
+        <p>Работаем с бронзой, латунью, серебром, а также деревом, стеклом, оргстеклом.</p>
+        <p>Технологии: литьё, штамповка, гальваническое покрытие, гравировка, эмалирование, комбинированные отделки.</p>
+        <p>Форматы: от массовых тиражей до уникальных штучных изделий.</p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Catalog Section -->
-  <section id="catalog" class="section catalog">
-    <div class="container">
-      <h2>Каталог продукции</h2>
-      <div class="filters" aria-label="Фильтры каталога">
-        <div class="filter-group">
-          <label for="searchInput">Поиск:</label>
-          <input type="text" id="searchInput" placeholder="Название или артикул" aria-label="Поиск по названию или артикулу">
-        </div>
-        <div class="filter-group">
-          <label for="categorySelect">Категория:</label>
-          <select id="categorySelect" aria-label="Выбор категории">
-            <option value="all">Все категории</option>
-          </select>
-        </div>
-        <div class="filter-group">
-          <label for="sortSelect">Сортировка:</label>
-          <select id="sortSelect" aria-label="Сортировка">
-            <option value="popular">По популярности</option>
-            <option value="price">По цене</option>
-            <option value="new">Новинки</option>
-          </select>
-        </div>
+    <section id="clients" class="section">
+      <div class="container">
+        <h2>Кому подходит FABULA CRAFT</h2>
+        <p>Госструктуры, силовые и ведомственные организации • Корпоративные клиенты • Спортивные федерации и клубы • Школы и вузы • Ивент-агентства • Частные заказы (юбилеи, службы, клубы)</p>
       </div>
-      <!-- Product grid will be injected here -->
-      <div id="productGrid" class="product-grid" aria-live="polite"></div>
-      <!-- Pagination controls -->
-      <div id="pagination" class="pagination" aria-label="Пагинация"></div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Portfolio Gallery -->
-  <section id="portfolio" class="section portfolio bg-alt">
-    <div class="container">
-      <h2>Наше портфолио</h2>
-      <!-- Portfolio Filters -->
-      <div class="portfolio-filters" style="margin-bottom:1rem; display:flex; align-items:center; gap:0.5rem; flex-wrap:wrap;">
-        <label for="portfolioFilter" style="font-weight:600;">Категория:</label>
-        <select id="portfolioFilter" style="padding:0.4rem; border:1px solid #ccc; border-radius:4px; min-width:200px;">
-          <option value="all">Все работы</option>
-          <option value="medals">Медали</option>
-          <option value="badges">Значки</option>
-          <option value="coins">Монеты</option>
-          <option value="gifts">Подарки</option>
-        </select>
+    <section id="why" class="section bg-alt">
+      <div class="container">
+        <h2>Почему нас выбирают</h2>
+        <ul>
+          <li>Опыт с 1994 года. Более трёх десятилетий в наградной отрасли.</li>
+          <li>Собственное производство в Алматы. Контроль качества на каждом этапе.</li>
+          <li>Индивидуальный дизайн. Разработка под задачу, фирменный стиль и гербика.</li>
+          <li>Материалы и отделки на выбор. От классической эмали до комбинированного гальвано-финиша.</li>
+          <li>Тиражи — любые. От единичных экземпляров до массовых партий.</li>
+          <li>Персонализация. Нумерация, именные таблички, лазерная гравировка.</li>
+        </ul>
       </div>
-      <div class="portfolio-grid" id="portfolioGrid">
-        <figure class="portfolio-item" data-category="medals">
-          <img src="images/medal.webp" alt="Пример медали Fabula" loading="lazy">
-          <figcaption>Медаль</figcaption>
-        </figure>
-        <figure class="portfolio-item" data-category="badges">
-          <img src="images/medal.webp" alt="Пример значка Fabula" loading="lazy">
-          <figcaption>Значок</figcaption>
-        </figure>
-        <figure class="portfolio-item" data-category="coins">
-          <img src="images/medal.webp" alt="Памятная монета Fabula" loading="lazy">
-          <figcaption>Монета</figcaption>
-        </figure>
-        <figure class="portfolio-item" data-category="gifts">
-          <img src="images/medal.webp" alt="Корпоративный подарок Fabula" loading="lazy">
-          <figcaption>Подарок</figcaption>
-        </figure>
-        <!-- Добавьте ещё работы в соответствии с вашими категориями -->
+    </section>
+
+    <section id="steps" class="section">
+      <div class="container">
+        <h2>Как оформить заказ</h2>
+        <ol>
+          <li>Заявка. Опишите изделие (назначение, количество, сроки, бюджет).</li>
+          <li>Дизайн. Готовим эскиз/3D-превью и согласовываем отделки.</li>
+          <li>Пилотный образец. При необходимости изготавливаем образец.</li>
+          <li>Производство. Литьё/штамповка, гальваника, эмаль, гравировка, сборка.</li>
+          <li>Поставка. Упаковка, документация, передача заказа.</li>
+        </ol>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Process Section -->
-  <section id="process" class="section process">
-    <div class="container">
-      <h2>Как мы работаем</h2>
-      <ol class="process-steps">
-        <li>
-          <span class="step-number">1</span>
-          <h3>Заявка</h3>
-          <p>Вы оставляете заявку или связываетесь с нами любым удобным способом.</p>
-        </li>
-        <li>
-          <span class="step-number">2</span>
-          <h3>Дизайн</h3>
-          <p>Мы разрабатываем уникальный дизайн с учётом ваших пожеланий.</p>
-        </li>
-        <li>
-          <span class="step-number">3</span>
-          <h3>Производство</h3>
-          <p>Изделия изготавливаются из выбранных материалов с соблюдением технологий.</p>
-        </li>
-        <li>
-          <span class="step-number">4</span>
-          <h3>Контроль качества</h3>
-          <p>Каждый экземпляр проходит проверку на соответствие стандартам.</p>
-        </li>
-        <li>
-          <span class="step-number">5</span>
-          <h3>Доставка и упаковка</h3>
-          <p>Готовый заказ упаковывается и доставляется вам в удобное время.</p>
-        </li>
-      </ol>
-    </div>
-  </section>
-
-  <!-- FAQ Section -->
-  <section id="faq" class="section faq">
-    <div class="container">
-      <h2>Часто задаваемые вопросы</h2>
-      <div class="faq-list">
-        <details>
-          <summary>Какие материалы вы используете?</summary>
-          <p>Мы работаем с бронзой, латунью, эмалями и другими металлами, обеспечивая долговечность и эстетику изделий.</p>
-        </details>
-        <details>
-          <summary>Сколько времени занимает производство?</summary>
-          <p>Срок изготовления зависит от сложности заказа и обычно составляет от 7 до 30 дней.</p>
-        </details>
-        <details>
-          <summary>Можно ли заказать индивидуальный дизайн?</summary>
-          <p>Да, наши дизайнеры разработают уникальный дизайн с учётом ваших пожеланий и требований.</p>
-        </details>
-        <details>
-          <summary>Предоставляете ли вы образцы?</summary>
-          <p>Мы можем подготовить макеты и, при необходимости, образцы продукции для согласования.</p>
-        </details>
-        <details>
-          <summary>Какие способы оплаты доступны?</summary>
-          <p>Мы принимаем безналичный расчёт, банковские карты и другие удобные формы оплаты.</p>
-        </details>
-        <details>
-          <summary>Работаете ли вы с небольшими тиражами?</summary>
-          <p>Да, мы готовы изготовить как единичные экземпляры, так и крупные партии.</p>
-        </details>
-        <details>
-          <summary>Какие гарантийные обязательства?</summary>
-          <p>Мы гарантируем качество продукции и готовы устранить недочёты, если они обнаружатся.</p>
-        </details>
-        <details>
-          <summary>Как оформить заказ?</summary>
-          <p>Нажмите кнопку «Заказать» на карточке товара или заполните форму в разделе «Контакты».</p>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <!-- Trust Section -->
-  <section id="trust" class="section trust bg-alt">
-    <div class="container">
-      <h2>Нам доверяют</h2>
-      <div class="trust-grid">
-        <div class="trust-item">
-          <img src="images/medal.webp" alt="Логотип партнёра" loading="lazy">
-          <p>Госучреждения</p>
-        </div>
-        <div class="trust-item">
-          <img src="images/medal.webp" alt="Логотип партнёра" loading="lazy">
-          <p>Крупные компании</p>
-        </div>
-        <div class="trust-item">
-          <img src="images/medal.webp" alt="Логотип партнёра" loading="lazy">
-          <p>Спортивные федерации</p>
+    <section id="portfolio" class="section bg-alt">
+      <div class="container">
+        <h2>Портфолио</h2>
+        <div class="portfolio-grid">
+          <figure>
+            <img src="images/medal.webp" alt="Памятная медаль, латунь, никелирование, эмаль, лента — FABULA CRAFT, Алматы">
+            <figcaption>Спортивная медаль «Алматы» — латунь, никель, мягкая эмаль, лента с печатью.</figcaption>
+          </figure>
+          <figure>
+            <img src="images/efa2d802-9573-4e7b-810a-01fe5f6e69dc.webp" alt="Значок с эмалью на винтовом креплении — изготовление на заказ">
+            <figcaption>Знак отличия «Почёт» — бронза, золочение, горячая эмаль, булавка-штифт.</figcaption>
+          </figure>
+          <figure>
+            <img src="images/hero.webp" alt="Памятная монета 40 мм со сложным рельефом и гравировкой">
+            <figcaption>Памятная монета 40 мм — латунь, серебрение, лазерная гравировка оборота.</figcaption>
+          </figure>
+          <figure>
+            <img src="images/hero.webp" alt="Памятная медаль, латунь, никелирование, эмаль, лента — FABULA CRAFT, Алматы">
+            <figcaption>Орденская планка — металл, колодка с муаровой лентой, штифт.</figcaption>
+          </figure>
         </div>
       </div>
-      <div class="reviews">
-        <blockquote>
-          <p>«Заказывали медали и значки у Fabula. Все сделано качественно и точно в срок!»</p>
-          <cite>— Довольный клиент</cite>
-        </blockquote>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Contacts Section -->
-  <section id="contacts" class="section contacts">
-    <div class="container">
-      <h2>Контакты</h2>
-      <div class="contacts-grid">
-        <div class="contact-info">
-          <p><strong>Адрес:</strong> ул. Торетай 65, Алматы, Казахстан</p>
-          <p><strong>Телефон:</strong> <a href="tel:+77475583961">+7 747 558 39 61</a></p>
-          <p><strong>Email:</strong> <a href="mailto:info@fabula.kz">info@fabula.kz</a></p>
-          <p><strong>WhatsApp:</strong> <a href="https://wa.me/77475583961" target="_blank" rel="noopener">Написать в WhatsApp</a></p>
-          <p><strong>Instagram:</strong> <a href="https://www.instagram.com/fabula.com.kz" target="_blank" rel="noopener">@fabula.com.kz</a></p>
-        </div>
-        <div class="contact-map">
-          <iframe title="Карта расположения Fabula" src="https://www.openstreetmap.org/export/embed.html?bbox=76.913%2C43.227%2C76.927%2C43.237&amp;layer=mapnik&amp;marker=43.232%2C76.92" style="border:0" loading="lazy"></iframe>
-        </div>
+    <section id="faq" class="section">
+      <div class="container">
+        <h2>Частые вопросы</h2>
+        <dl class="faq-list">
+          <dt>Какие минимальные тиражи?</dt>
+          <dd>Делаем как единичные изделия, так и крупные партии — под задачу.</dd>
+          <dt>Можно ли сделать изделие по фото/эскизу?</dt>
+          <dd>Да. Примем ваш референс и предложим технологичный дизайн.</dd>
+          <dt>Какие отделки доступны?</dt>
+          <dd>Никель/серебрение/золочение, старение металла, эмаль (мягкая/горячая), комбинированные финиши.</dd>
+          <dt>Делаете ли персонализацию?</dt>
+          <dd>Да: нумерация, имена, даты, QR, фирменные элементы.</dd>
+          <dt>Сроки?</dt>
+          <dd>Зависят от сложности и тиража. Скажем ориентиры после брифа и выбора технологий.</dd>
+          <dt>Можно ли срочно?</dt>
+          <dd>Иногда — да. Сообщите дедлайн при обращении: предложим реалистичный план.</dd>
+          <dt>Отправка по Казахстану?</dt>
+          <dd>Да, работаем по РК; самовывоз в Алматы.</dd>
+        </dl>
       </div>
-      <div class="contact-form-wrapper">
-        <h3>Связаться с нами</h3>
-        <form id="contactForm" novalidate>
-          <!-- Базовые поля -->
-          <div class="form-basic">
-            <div class="form-row">
-              <label for="cfName">Имя</label>
-              <input type="text" id="cfName" name="name" required aria-required="true">
-            </div>
-            <div class="form-row">
-              <label for="cfPhone">Телефон</label>
-              <input type="tel" id="cfPhone" name="phone" required aria-required="true">
-            </div>
-            <div class="form-row">
-              <label for="cfEmail">Email</label>
-              <input type="email" id="cfEmail" name="email">
-            </div>
-          </div>
-          <!-- Расширенный бриф (скрыт по умолчанию) -->
-          <div class="extended-fields" hidden>
-            <div class="form-row">
-              <label for="cfCategory">Категория</label>
-              <select id="cfCategory" name="category">
-                <option value="">-- Выберите категорию --</option>
-                <!-- категории будут добавлены динамически -->
-              </select>
-            </div>
-            <div class="form-row">
-              <label for="cfFile">Пример (файл)</label>
-              <input type="file" id="cfFile" name="file" accept="image/*">
-            </div>
-            <div class="form-row">
-              <label for="cfMessage">Пожелания / комментарии</label>
-              <textarea id="cfMessage" name="message" rows="3"></textarea>
-            </div>
-            <div class="form-row">
-              <label for="cfQuantity">Тираж / количество</label>
-              <input type="number" id="cfQuantity" name="quantity" min="1">
-            </div>
-          </div>
-          <div class="form-row checkbox-row">
-            <input type="checkbox" id="cfConsent" required aria-required="true">
-            <label for="cfConsent">Я соглашаюсь с политикой конфиденциальности</label>
-          </div>
-          <div class="form-row" style="display:flex; gap:0.5rem; flex-wrap:wrap;">
-            <button type="button" id="toggleExtended" class="btn btn-secondary">Дополнительный бриф</button>
-            <button type="submit" class="btn btn-primary">Отправить</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Footer -->
+    <section id="contacts" class="section bg-alt">
+      <div class="container">
+        <h2>Контакты</h2>
+        <address>
+          Адрес производства: г. Алматы, Жетысуский район, ул. Полежаева, 65<br>
+          Тел.: <a href="tel:+77272780499">+7 (727) 278-04-99</a>, <a href="tel:+77272336873">+7 (727) 233-68-73</a><br>
+          E-mail: <a href="mailto:fabula.kz@mail.ru">fabula.kz@mail.ru</a>
+        </address>
+        <div class="contact-actions">
+          <a href="tel:+77272780499" class="btn btn-primary">Позвонить</a>
+          <a href="https://wa.me/77272780499" class="btn btn-secondary">Написать в WhatsApp</a>
+          <a href="https://maps.google.com/?q=Алматы, ул. Полежаева, 65" class="btn btn-secondary">Построить маршрут</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
   <footer class="site-footer">
     <div class="container footer-grid">
       <div class="footer-nav">
         <ul>
-          <li><a href="#cases">Для кого</a></li>
-          <li><a href="#advantages">Преимущества</a></li>
-          <li><a href="#catalog">Каталог</a></li>
+          <li><a href="#services">Услуги</a></li>
           <li><a href="#portfolio">Портфолио</a></li>
-          <li><a href="#process">Как работаем</a></li>
-          <li><a href="#faq">FAQ</a></li>
-          <li><a href="#trust">Доверие</a></li>
           <li><a href="#contacts">Контакты</a></li>
+          <li><a href="about.html">О нас</a></li>
         </ul>
       </div>
       <div class="footer-policy">
-        <p>&copy; <span id="currentYear"></span> Fabula. Все права защищены.</p>
-        <p><a href="#">Политика конфиденциальности</a></p>
+        <p>© FABULA CRAFT, 1994–2025</p>
+        <p>ТОО «FABULA» — БИН 941140001376</p>
+        <p>Адрес: Алматы, ул. Полежаева, 65</p>
+        <p>Тел.: +7 (727) 278-04-99, +7 (727) 233-68-73</p>
+        <p>E-mail: fabula.kz@mail.ru</p>
       </div>
     </div>
   </footer>
 
-  <!-- Modal for Quick View -->
-  <div id="quickViewModal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
-    <div class="modal-content">
-      <button class="modal-close" data-close aria-label="Закрыть">×</button>
-      <div id="quickViewBody"></div>
-    </div>
-  </div>
-
-  <!-- Modal for Brief (Order) Form -->
-  <div id="briefModal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
-    <div class="modal-content">
-      <button class="modal-close" data-close aria-label="Закрыть">×</button>
-      <h3>Заполните бриф</h3>
-      <form id="briefForm" novalidate>
-        <div class="form-row">
-          <label for="bfName">Имя</label>
-          <input type="text" id="bfName" name="name" required aria-required="true">
-        </div>
-        <div class="form-row">
-          <label for="bfPhone">Телефон</label>
-          <input type="tel" id="bfPhone" name="phone" required aria-required="true">
-        </div>
-        <div class="form-row">
-          <label for="bfEmail">Email</label>
-          <input type="email" id="bfEmail" name="email">
-        </div>
-        <div class="form-row">
-          <label for="bfCategory">Категория</label>
-          <select id="bfCategory" name="category">
-            <option value="">Выберите</option>
-          </select>
-        </div>
-        <div class="form-row">
-          <label for="bfExample">Файл/ссылка примера</label>
-          <input type="url" id="bfExample" name="example" placeholder="https://">
-        </div>
-        <div class="form-row">
-          <label for="bfWishes">Пожелания</label>
-          <textarea id="bfWishes" name="wishes" rows="3"></textarea>
-        </div>
-        <div class="form-row">
-          <label for="bfQuantity">Тираж</label>
-          <input type="number" id="bfQuantity" name="quantity" min="1">
-        </div>
-        <div class="form-row">
-          <label for="bfDeadline">Срок</label>
-          <input type="text" id="bfDeadline" name="deadline" placeholder="Например, 2 недели">
-        </div>
-        <div class="form-row">
-          <label for="bfContactMethod">Предпочитаемый способ связи</label>
-          <select id="bfContactMethod" name="contactMethod">
-            <option value="whatsapp">WhatsApp</option>
-            <option value="phone">Телефон</option>
-            <option value="email">Email</option>
-          </select>
-        </div>
-        <div class="form-row checkbox-row">
-          <input type="checkbox" id="bfConsent" required aria-required="true">
-          <label for="bfConsent">Я соглашаюсь с политикой конфиденциальности</label>
-        </div>
-        <button type="submit" class="btn btn-primary">Отправить</button>
-      </form>
-    </div>
-  </div>
-
-  <!-- Product data embedded as JSON for client-side script -->
-  <script id="productData" type="application/json">
-    <!-- Product JSON will be inlined by script.js -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "FABULA CRAFT",
+    "legalName": "ТОО «FABULA»",
+    "url": "https://fabulacraft.com",
+    "telephone": ["+7-727-278-0499", "+7-727-233-6873"],
+    "email": "fabula.kz@mail.ru",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "KZ",
+      "addressLocality": "Алматы",
+      "streetAddress": "ул. Полежаева, 65"
+    },
+    "foundingDate": "1994-11-29",
+    "knowsAbout": [
+      "чеканка медалей",
+      "изготовление медалей и значков",
+      "эмалирование",
+      "гравировка",
+      "гальваническое покрытие",
+      "памятные монеты",
+      "жетоны",
+      "орденские планки"
+    ],
+    "sameAs": ["http://fabula.com.kz"]
+  }
   </script>
-
   <script src="script.js"></script>
 </body>
 </html>
