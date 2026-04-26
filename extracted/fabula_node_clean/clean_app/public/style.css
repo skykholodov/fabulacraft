@@ -1,0 +1,685 @@
+/*
+  Fabula Landing Page Stylesheet
+  Используются современные CSS‑методики: flexbox и grid.
+  Палитра: золотые и бронзовые оттенки, светлый фон и тёмный текст для хорошего контраста.
+*/
+
+/* CSS variables for easy theming */
+:root {
+  /*
+    Фирменные цвета: замените значения ниже на актуальные значения из вашего брендбука.
+    Для демонстрации используется палитра в оттенках бирюзового, аналогичная стилю
+    некоторых постов Fabula в Instagram.  
+    Чтобы поменять цвета, достаточно изменить переменные --color-primary и --color-secondary.
+  */
+  /*
+    Fabula фирменные цвета
+    Основной оттенок взят из логотипа (насыщенный фиолетово‑синий),
+    тёмный оттенок — чуть более тёмная версия основного, а акцентный цвет — зелёный штрих с логотипа.
+  */
+  --color-primary: #3b2b96; /* фиолетово‑синий основной цвет из логотипа */
+  --color-secondary: #2f2278; /* тёмный оттенок основного цвета */
+  --color-accent: #03a55a; /* зелёный акцент */
+  --color-bg: #f5f9f9;
+  --color-text: #333333;
+  --color-light: #ffffff;
+  --header-height: 70px;
+  /* Background color for alternating sections */
+  --section-alt-bg: #f7f5fb;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+/* Utility classes */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--color-secondary);
+  color: #fff;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+/* Header */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--header-height);
+  background-color: var(--color-bg);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  z-index: 1000;
+}
+
+.site-header .logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  /* Remove default typography styles since logo is now an image */
+  font-size: 0;
+  color: var(--color-primary);
+}
+
+/* Logo image sizing */
+.logo-img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
+.main-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 500;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease;
+}
+
+.main-nav a:hover,
+.main-nav a:focus {
+  color: var(--color-primary);
+}
+
+.header-cta {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  height: 70vh;
+  min-height: 400px;
+  margin-top: var(--header-height);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.hero-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -2;
+  /* Animate background for subtle motion similar to видеодинамика */
+  animation: zoomPan 30s ease-in-out infinite alternate;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /*
+    Overlay tinted with our primary colour for better brand consistency.
+    We convert the hex primary colour to RGB: #3b2b96 → 59, 43, 150.
+  */
+  background: rgba(59,43,150,0.5);
+  z-index: -1;
+}
+
+/* Keyframes for animated hero background */
+@keyframes zoomPan {
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+  50% {
+    transform: scale(1.1) translate(-3%, -2%);
+  }
+  100% {
+    transform: scale(1) translate(0, 0);
+  }
+}
+
+.hero-content {
+  text-align: center;
+  color: #fff;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin: 0 0 1rem;
+}
+
+.hero .subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* Section common styles */
+.section {
+  padding: 4rem 0;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: var(--color-secondary);
+}
+
+/* Alternate section background */
+.bg-alt {
+  background-color: var(--section-alt-bg);
+}
+
+/* Hover effects for cards and portfolio */
+.case-card,
+.adv-card,
+.product-card,
+.portfolio-item,
+.process-steps li,
+.faq-list details,
+.trust-item {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.case-card:hover,
+.adv-card:hover,
+.product-card:hover,
+.portfolio-item:hover,
+.process-steps li:hover,
+.faq-list details:hover,
+.trust-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Cases */
+.cases-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.case-card {
+  background-color: var(--color-light);
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.case-card h3 {
+  margin-top: 0;
+  color: var(--color-primary);
+}
+
+/* Advantages */
+.adv-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.adv-card {
+  background-color: var(--color-light);
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+
+.adv-card h3 {
+  margin-top: 0;
+  color: var(--color-primary);
+}
+
+/* Catalog */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.filter-group label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+
+.filter-group input[type="text"],
+.filter-group select {
+  padding: 0.4rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  min-width: 180px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.product-card {
+  background-color: var(--color-light);
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.product-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.product-card .product-body {
+  padding: 0.8rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card h4 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  color: var(--color-primary);
+}
+
+.product-card p {
+  flex-grow: 1;
+  font-size: 0.9rem;
+  margin: 0 0 0.6rem;
+}
+
+.product-card .price {
+  font-weight: bold;
+  color: var(--color-secondary);
+  margin-bottom: 0.6rem;
+}
+
+.product-card .badges {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  display: flex;
+  gap: 0.25rem;
+}
+
+.badge {
+  background-color: var(--color-primary);
+  color: #fff;
+  padding: 0.2rem 0.4rem;
+  font-size: 0.7rem;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+.product-card .card-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.6rem;
+}
+
+.product-card button {
+  flex: 1;
+  padding: 0.4rem;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background-color 0.3s ease;
+}
+
+.product-card button.order {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+.product-card button.order:hover,
+.product-card button.order:focus {
+  background-color: var(--color-secondary);
+}
+
+.product-card button.quick {
+  /* Используем акцентный зелёный цвет для кнопки «Быстрый просмотр» */
+  background-color: var(--color-accent);
+  color: #fff;
+}
+
+/* Наведение/фокус на кнопке «Быстрый просмотр» */
+.product-card button.quick:hover,
+.product-card button.quick:focus {
+  background-color: var(--color-secondary);
+  color: #fff;
+}
+
+/* Pagination */
+.pagination {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.pagination button {
+  padding: 0.4rem 0.8rem;
+  border: 1px solid var(--color-primary);
+  background-color: transparent;
+  color: var(--color-primary);
+  border-radius: 4px;
+  cursor: pointer;
+}
+.pagination button.active,
+.pagination button:hover {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+/* Portfolio */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+.portfolio-item {
+  background-color: var(--color-light);
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  text-align: center;
+}
+.portfolio-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.portfolio-item figcaption {
+  padding: 0.5rem;
+  background-color: #fff;
+  font-size: 0.9rem;
+}
+
+/* Process Steps */
+.process-steps {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  padding: 0;
+}
+.process-steps li {
+  background-color: var(--color-light);
+  border-radius: 6px;
+  padding: 1rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  text-align: center;
+}
+.process-steps .step-number {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  background-color: var(--color-primary);
+  color: #fff;
+  border-radius: 50%;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+/* FAQ */
+.faq-list details {
+  background-color: var(--color-light);
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+  padding: 0.8rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.faq-list summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.faq-list p {
+  margin: 0.5rem 0 0;
+}
+
+/* Trust */
+.trust-grid {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+.trust-item {
+  text-align: center;
+  max-width: 150px;
+}
+.trust-item img {
+  width: 100%;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.reviews {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  font-style: italic;
+}
+.reviews cite {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  font-style: normal;
+  color: var(--color-secondary);
+}
+
+/* Contacts */
+.contacts-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.contact-info {
+  flex: 1;
+  min-width: 260px;
+}
+.contact-map {
+  flex: 1;
+  min-width: 260px;
+  height: 300px;
+}
+.contact-map iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 6px;
+}
+
+.contact-form-wrapper {
+  margin-top: 2rem;
+}
+.contact-form-wrapper form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: var(--color-light);
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+.form-row {
+  margin-bottom: 0.8rem;
+  display: flex;
+  flex-direction: column;
+}
+.form-row label {
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+}
+.form-row input,
+.form-row select,
+.form-row textarea {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+.checkbox-row {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Footer */
+.site-footer {
+  background-color: var(--color-secondary);
+  color: #fff;
+  padding: 1.5rem 0;
+  font-size: 0.9rem;
+}
+.footer-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.footer-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.footer-nav a {
+  color: #fff;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+.footer-nav a:hover,
+.footer-nav a:focus {
+  opacity: 0.7;
+}
+.footer-policy p {
+  margin: 0.2rem 0;
+}
+.footer-policy a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+.modal[aria-hidden="false"] {
+  display: flex;
+}
+.modal-content {
+  background-color: var(--color-bg);
+  padding: 1rem;
+  border-radius: 6px;
+  max-width: 600px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+}
+.modal-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  border: none;
+  background: transparent;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--color-secondary);
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .section {
+    padding: 3rem 0;
+  }
+  .site-header .main-nav ul {
+    gap: 0.5rem;
+  }
+}
